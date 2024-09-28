@@ -1,0 +1,27 @@
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org"
+    th:replace="~{base::html(
+        ~{::title},
+        ~{::content},
+        ~{::additionalCss},
+        ~{}
+    )}"
+    >
+
+    <th:block th:fragment="additionalCss">
+        <link rel="stylesheet" href="style.css">
+    </th:block>
+
+<title>
+    Welcome to Shopee Yan!!
+</title>
+
+<th:block th:fragment="content">    
+    <h1>Welcome!! Ready to cart for the 11.11 sales??</h1>
+    <p>Check out our deals!! Lowest price guranteed!!</p>
+    <p>Current date and time: <span th:text="${currentDateTime}"></span></p>
+    <img src="shopping_woman.jpeg" style="max-width: 100%; height: auto;"/>
+    <img src="shopping_cart.jpeg" style="max-width: 100%; height: auto;"/>
+    <img src="shopping_bag.jpeg" style="max-width: 100%; height: auto;"/>
+</th:block>
+
+</html>
